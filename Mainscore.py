@@ -20,10 +20,7 @@ def home():
   score = get_score()
   return render_template('home_page.html', name = name, score = score)
 
-#@app.route("/<name>")
-#def user_path(name):
-#  output_page = f"<h1> Hello dear {name}! Hope all is good.</h1>"
-#  return output_page
+
 
 @app.errorhandler(404)
 def page_not_found(e):
