@@ -1,6 +1,6 @@
 
 import os.path
-import Utils
+import settings
 
 
 def get_last_line(source_file):
