@@ -1,6 +1,6 @@
 
 from flask import Flask, render_template
-import score, Utils
+import score, settings
 
 
 app = Flask(__name__)
