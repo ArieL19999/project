@@ -2,10 +2,7 @@
 import os.path
 import Utils
 
-#
-# get the last results reported in the score file
-# If files still does not exist last_score = 0
-#
+
 def get_last_line(source_file):
   with open(source_file, "rb") as file:
     try:
@@ -22,7 +19,6 @@ def get_last_line(source_file):
 
 
 
-# add new score to the score file
 def add_score(difficulty, score_file):
   points_of_winning = (difficulty * 3) + 5
   last_score = get_last_line(score_file)
@@ -36,8 +32,6 @@ def add_score(difficulty, score_file):
   
 def main():
   file_name=Utils.SCORES_FILE_NAME
-  #Create scores file if it does not exist
-  # add score 0 to the file
   if not os.path.isfile(file_name):
     with open(file_name, 'w') as file:
       file.write("This is the scores file: \n0")  
